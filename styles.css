@@ -1,15 +1,15 @@
 :root {
-    --primary-color: #1E3A8A;
-    --secondary-color: #FFB800;
-    --accent-color: #10B981;
-    --dark-bg: #0A1929;
-    --darker-bg: #061325;
-    --text-primary: #F3F4F6;
-    --text-secondary: #94A3B8;
-    --card-bg: rgba(30, 58, 138, 0.1);
-    --gradient-start: rgba(30, 58, 138, 0.8);
+    --primary-color: #2563eb;    /* Brighter blue */
+    --secondary-color: #f59e0b;  /* Warm orange */
+    --accent-color: #10b981;     /* Emerald green */
+    --dark-bg: #0f172a;          /* Deeper navy */
+    --darker-bg: #060d1c;        /* Even darker navy */
+    --text-primary: #f8fafc;     /* Crisp white */
+    --text-secondary: #94a3b8;   /* Soft gray */
+    --card-bg: rgba(37, 99, 235, 0.1);
+    --gradient-start: rgba(37, 99, 235, 0.8);
     --gradient-end: rgba(16, 185, 129, 0.2);
-    --text-color: #333333;
+    --highlight: #fbbf24;        /* Golden highlight */
     --light-bg: #f8f9fa;
 }
 
@@ -1404,8 +1404,9 @@ html {
 @media (max-width: 768px) {
     nav {
         padding: 15px;
-        background: rgba(14, 23, 38, 0.95);
+        background: rgba(15, 23, 42, 0.95);
         backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .nav-links {
@@ -1413,13 +1414,12 @@ html {
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(14, 23, 38, 0.98);
-        padding: 12px 5px;
+        background: rgba(15, 23, 42, 0.98);
+        padding: 15px 10px;
         display: flex;
         justify-content: space-around;
         backdrop-filter: blur(20px);
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
         z-index: 1000;
     }
 
@@ -1428,49 +1428,48 @@ html {
     }
 
     .nav-links a {
-        font-size: 0.75rem;
+        font-size: 0.7rem;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 5px;
-        padding: 8px 12px;
-        border-radius: 12px;
+        padding: 10px;
+        border-radius: 14px;
         transition: all 0.3s ease;
     }
 
     .nav-links a i {
-        font-size: 1.4rem;
-        margin-bottom: 3px;
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+        color: var(--secondary-color);
     }
 
-    .nav-links a:hover,
     .nav-links a.active {
-        background: rgba(255, 255, 255, 0.05);
-        color: var(--secondary-color);
-        transform: translateY(-3px);
+        background: rgba(37, 99, 235, 0.2);
+        color: var(--highlight);
     }
 
     /* Hero Section */
     .hero-content {
-        padding: 120px 15px 40px;
+        padding: 100px 15px 40px;
     }
 
     .greeting {
-        font-size: 1rem;
-        background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+        font-size: 0.9rem;
+        background: linear-gradient(45deg, var(--highlight), var(--secondary-color));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-weight: 600;
+        letter-spacing: 2px;
     }
 
     .glowing-text {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
         line-height: 1.2;
-        margin: 15px 0;
-        background: linear-gradient(45deg, #ffffff, var(--secondary-color));
+        margin: 10px 0;
+        background: linear-gradient(45deg, var(--text-primary), var(--highlight));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 30px rgba(255, 184, 0, 0.2);
+        text-shadow: 0 0 30px rgba(251, 191, 36, 0.3);
     }
 
     .profession-slider {
@@ -1493,19 +1492,16 @@ html {
     }
 
     .stat-item {
-        background: rgba(255, 255, 255, 0.03);
+        background: rgba(37, 99, 235, 0.1);
         padding: 20px;
         border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .stat-number {
-        font-size: 2.5rem;
-        color: var(--secondary-color);
-        font-weight: 700;
+        font-size: 2.2rem;
+        color: var(--highlight);
     }
 
     .stat-label {
@@ -1519,21 +1515,21 @@ html {
     }
 
     .contact-badge {
-        background: rgba(255, 255, 255, 0.02);
-        padding: 15px;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
+        background: rgba(37, 99, 235, 0.1);
+        padding: 12px 15px;
+        border-radius: 12px;
+        border: 1px solid rgba(37, 99, 235, 0.2);
         display: flex;
         align-items: center;
         gap: 15px;
     }
 
     .contact-badge i {
-        font-size: 1.6rem;
-        color: var(--secondary-color);
-        background: rgba(255, 255, 255, 0.05);
+        font-size: 1.4rem;
+        color: var(--highlight);
+        background: rgba(251, 191, 36, 0.1);
         padding: 10px;
-        border-radius: 12px;
+        border-radius: 10px;
     }
 
     /* CTA Buttons */
@@ -1543,9 +1539,9 @@ html {
     }
 
     .cta-button {
-        padding: 16px;
-        border-radius: 14px;
-        font-size: 1rem;
+        padding: 14px;
+        border-radius: 12px;
+        font-size: 0.95rem;
         font-weight: 600;
         letter-spacing: 0.5px;
         display: flex;
@@ -1557,7 +1553,7 @@ html {
 
     .cta-button.primary {
         background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-        border: none;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     }
 
     .cta-button.secondary {
@@ -1571,18 +1567,20 @@ html {
 
     /* Certifications */
     .certification-card {
-        background: rgba(255, 255, 255, 0.02);
+        background: rgba(37, 99, 235, 0.1);
+        padding: 20px;
         border-radius: 16px;
-        padding: 25px;
-        margin: 0 10px;
+        border: 1px solid rgba(37, 99, 235, 0.2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     }
 
     .cert-icon {
-        width: 55px;
-        height: 55px;
-        border-radius: 14px;
-        font-size: 1.8rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        font-size: 1.6rem;
         background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
     }
 
     .cert-title h3 {
@@ -1597,10 +1595,11 @@ html {
     }
 
     .skill-tag {
-        background: rgba(255, 255, 255, 0.03);
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 0.85rem;
+        background: rgba(251, 191, 36, 0.1);
+        padding: 6px 12px;
+        border-radius: 8px;
+        font-size: 0.8rem;
+        border: 1px solid rgba(251, 191, 36, 0.2);
     }
 
     /* Contact Form */
@@ -1640,7 +1639,7 @@ html {
 /* Extra Small Devices */
 @media (max-width: 360px) {
     .glowing-text {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
 
     .slider-text span {
@@ -1648,14 +1647,56 @@ html {
     }
 
     .stat-number {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .contact-badge {
-        padding: 12px;
+        padding: 10px;
     }
 
     .contact-badge i {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        padding: 8px;
     }
+}
+
+/* Add smooth animations */
+.nav-links a,
+.stat-item,
+.contact-badge,
+.cta-button,
+.certification-card,
+.skill-tag {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Add hover effects */
+.nav-links a:hover,
+.stat-item:hover,
+.contact-badge:hover,
+.certification-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(37, 99, 235, 0.25);
+}
+
+/* Add active state for navigation */
+.nav-links a.active {
+    background: rgba(37, 99, 235, 0.2);
+    color: var(--highlight);
+    transform: translateY(-3px);
+}
+
+/* Enhanced Background Effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 10%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
 } 
